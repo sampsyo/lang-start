@@ -17,6 +17,11 @@ Run an example:
 
     $ echo '8*(3+2)+2' | _build/default/bin/ex.bc
 
+Explore the implementation in a [utop][] REPL:
+
+    $ opam install utop
+    $ jbuilder utop src
+
 This repository contains:
 
 * `src/`: The language implementation.
@@ -30,3 +35,4 @@ This repository contains:
 [dune]: https://github.com/ocaml/dune
 [menhir]: http://gallium.inria.fr/~fpottier/menhir/
 [lexyacc]: https://caml.inria.fr/pub/docs/manual-ocaml/lexyacc.html
+[utop]: https://github.com/diml/utop
