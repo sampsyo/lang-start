@@ -11,5 +11,12 @@ rule token =
     | ws+        { token lexbuf }
     | "("        { LEFT_PAREN }
     | ")"        { RIGHT_PAREN }
+
+    | "+"        { PLUS }
+    | "-"        { MINUS }
+    | "*"        { TIMES }
+    | "/"        { DIV }
+
     | num as n   { INT (int_of_string n) }
+
     | eof        { EOF }
