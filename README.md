@@ -15,7 +15,7 @@ Build by typing:
 
 Run an example:
 
-    $ echo '8*(3+2)+2' | _build/default/bin/ex.bc
+    $ echo '8*(3+2)+2' | jbuilder exec bin/ex.bc
 
 Explore the implementation in a [utop][] REPL:
 
