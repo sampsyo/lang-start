@@ -5,7 +5,11 @@ We need [Dune][] and [Menhir][]:
 
 Build by typing:
 
-    $ jbuilder build ex.exe
+    $ jbuilder build ex.bc
+
+Run an example:
+
+    $ echo '8*(3+2)+2' | _build/default/ex.bc
 
 [dune]: https://github.com/ocaml/dune
 [menhir]: http://gallium.inria.fr/~fpottier/menhir/
