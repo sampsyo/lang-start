@@ -1,8 +1,12 @@
 open Ast
 
-let pretty (e : expr) : string =
+let rec pretty (e : expr) : string =
     match e with
     | Int i -> string_of_int i
+    | Plus (e1, e2) -> (pretty e1) ^ " + " ^ (pretty e2)
+    | Minus (e1, e2) -> (pretty e1) ^ " - " ^ (pretty e2)
+    | Times (e1, e2) -> (pretty e1) ^ " * " ^ (pretty e2)
+    | Div (e1, e2) -> (pretty e1) ^ " / " ^ (pretty e2)
 
 let rec eval (e : expr) : int =
     match e with
@@ -15,4 +19,6 @@ let rec eval (e : expr) : int =
 let _ =
     let lexbuf = Lexing.from_channel stdin in
     let expr = Parser.prog Lexer.token lexbuf in
+    print_endline (pretty expr);
+    print_string "= ";
     print_endline (string_of_int (eval expr))
