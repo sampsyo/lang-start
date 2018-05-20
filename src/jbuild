@@ -5,5 +5,5 @@
 
 (ocamllex (lexer))
 
-(executable
-  ((name ex)))
+(library
+  ((name langstart)))

@@ -11,7 +11,7 @@ We need [Dune][] and [Menhir][]:
 
 Build by typing:
 
-    $ jbuilder build ex.bc
+    $ jbuilder build bin/ex.bc
 
 Run an example:
 
@@ -19,11 +19,11 @@ Run an example:
 
 This repository contains:
 
-* `ast.ml`: An ADT for the language syntax.
-* `parser.mly`: A [Menhir][] parser for expressions.
-* `lexer.mll`: The [ocamllex][lexyacc] lexer for that parser.
-* `ex.ml`: Read from stdin, parse, pretty-print, and evaluate.
-* `jbuild`: The build configuration for [Dune][].
+* `src/ast.ml`: An ADT for the language syntax.
+* `src/parser.mly`: A [Menhir][] parser for expressions.
+* `src/lexer.mll`: The [ocamllex][lexyacc] lexer for that parser.
+* `bin/ex.ml`: Read from stdin, parse, pretty-print, and evaluate.
+* `src/jbuild` and `bin/jbuild`: The build configuration for [Dune][].
 
 [dune]: https://github.com/ocaml/dune
 [menhir]: http://gallium.inria.fr/~fpottier/menhir/
