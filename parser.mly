@@ -5,10 +5,15 @@ open Ast
 %token <int> INT
 %token LEFT_PAREN
 %token RIGHT_PAREN
+%token EOF
 
-%start <Ast.expr> expr
+%start <Ast.expr> prog
 
 %%
+
+prog:
+    | e = expr EOF
+      { e }
 
 expr:
     | i = INT
