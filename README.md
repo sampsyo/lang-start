@@ -30,7 +30,8 @@ This repository contains:
     * `lexer.mll`: The [ocamllex][lexyacc] lexer for that parser.
     * `ops.ml`: Functions to pretty-print and evaluate expressions.
 * `bin/ex.ml`: A tool that reads a program from standard input.
-* `src/dune` and `bin/dune`: The build configuration for [Dune][].
+* `dune-project`, `src/dune`, and `bin/dune`:
+  The build configuration for [Dune][].
 
 [dune]: https://github.com/ocaml/dune
 [menhir]: http://gallium.inria.fr/~fpottier/menhir/
