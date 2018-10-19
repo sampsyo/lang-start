@@ -1,0 +1,14 @@
+opam-version: "2.0"
+name: "lang-start"
+version: "0.0.1"
+maintainer: "Adrian Sampson <asampson@cs.cornell.edu>"
+author: "Adrian Sampson <asampson@cs.cornell.edu>"
+homepage: "https://github.com/sampsyo/lang-start"
+bug-reports: "https://github.com/sampsyo/lang-start/issues"
+build: [ "dune" "build" ]
+install: [ "dune" "install" ]
+remove: ["ocamlfind" "remove" "project"]
+depends: [
+  "dune"
+  "menhir"
+]
