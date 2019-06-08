@@ -13,11 +13,11 @@ Start by making sure you have the dependency (just [Menhir][]):
 
 Build the executable by typing:
 
-    $ dune build bin/ex.bc
+    $ dune build bin/calc.bc
 
 Run an example:
 
-    $ echo '8*(3+2)+2' | dune exec bin/ex.bc
+    $ echo '8*(3+2)+2' | dune exec bin/calc.bc
 
 Explore the implementation in a [utop][] REPL:
 
@@ -31,7 +31,7 @@ This repository contains:
     * `parser.mly`: A [Menhir][] parser for expressions.
     * `lexer.mll`: The [ocamllex][lexyacc] lexer for that parser.
     * `ops.ml`: Functions to pretty-print and evaluate expressions.
-* `bin/ex.ml`: A tool that reads a program from standard input.
+* `bin/calc.ml`: A tool that reads a program from standard input.
 * `dune-project`, `src/dune`, and `bin/dune`:
   The build configuration for [Dune][].
 
