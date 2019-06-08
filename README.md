@@ -17,6 +17,11 @@ You can build the project and run an example in one step:
 
     $ echo '8*(3+2)+2' | dune exec calc
 
+If you just need to compile, use `dune build`.
+Or, to watch for changes and automatically rebuild, install [fswatch][] and then:
+
+    $ dune build --watch
+
 Explore the implementation in a [utop][] REPL:
 
     $ opam install utop
@@ -37,3 +42,4 @@ This repository contains:
 [menhir]: http://gallium.inria.fr/~fpottier/menhir/
 [lexyacc]: https://caml.inria.fr/pub/docs/manual-ocaml/lexyacc.html
 [utop]: https://github.com/diml/utop
+[fswatch]: https://github.com/emcrisostomo/fswatch
