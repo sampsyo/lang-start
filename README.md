@@ -4,11 +4,14 @@ Starting an Interpreter in OCaml
 This is a skeleton showing how to start writing a tiny interpreter in OCaml.
 It just parses, pretty-prints, and evaluates a trivial arithmetic AST.
 
-We need to install two dependencies, [Dune][] and [Menhir][]:
+To build the project, you will need [Dune][] v1.10.0+.
+You can install it using `opam install dune`.
+Start by making sure you have the dependency (just [Menhir][]):
 
+    $ dune build  # Generate the OPAM file.
     $ opam install . --deps-only
 
-Build by typing:
+Build the executable by typing:
 
     $ dune build bin/ex.bc
 

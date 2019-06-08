@@ -1,2 +1,4 @@
 _build
 .merlin
+lang-start.install
+lang-start.opam
