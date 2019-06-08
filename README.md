@@ -6,18 +6,16 @@ It just parses, pretty-prints, and evaluates a trivial arithmetic AST.
 
 To build the project, you will need [Dune][] v1.10.0+.
 You can install it using `opam install dune`.
-Start by making sure you have the dependency (just [Menhir][]):
 
-    $ dune build  # Generate the OPAM file.
+There is one dependency: [Menhir][].
+If you don't already have it, this will work to get it (or you can just do `opam install menhir`):
+
+    $ dune build @check  # Generate the OPAM file.
     $ opam install . --deps-only
 
-Build the executable by typing:
+You can build the project and run an example in one step:
 
-    $ dune build bin/calc.bc
-
-Run an example:
-
-    $ echo '8*(3+2)+2' | dune exec bin/calc.bc
+    $ echo '8*(3+2)+2' | dune exec calc
 
 Explore the implementation in a [utop][] REPL:
 
